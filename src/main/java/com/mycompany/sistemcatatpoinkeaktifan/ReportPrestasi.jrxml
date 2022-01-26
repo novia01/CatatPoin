@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f91b3211-79f7-404c-a31d-13bdbe897d56">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset Prestasi" uuid="33f886a2-30a4-41d5-a4d8-d644d1ee3b62">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM KegiatanPrestasi]]>
+		</queryString>
+		<field name="IDPrestasi" class="java.lang.Object"/>
+		<field name="JenisPrestasi" class="java.lang.Object"/>
+		<field name="TingkatPrestasi" class="java.lang.Object"/>
+		<field name="Keterangan" class="java.lang.Object"/>
+		<field name="Tanggal" class="java.lang.Object"/>
+		<field name="Poin" class="java.lang.Object"/>
+	</subDataset>
+	<subDataset name="DatasetPrestasi" uuid="06e8135a-551d-4017-a6ac-3bd82f0b89da">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM KegiatanPrestasi]]>
+		</queryString>
+		<field name="IDPrestasi" class="java.lang.Object"/>
+		<field name="JenisPrestasi" class="java.lang.Object"/>
+		<field name="TingkatPrestasi" class="java.lang.Object"/>
+		<field name="Keterangan" class="java.lang.Object"/>
+		<field name="Tanggal" class="java.lang.Object"/>
+		<field name="Poin" class="java.lang.Object"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM KegiatanPrestasi]]>
+	</queryString>
+	<field name="IDPrestasi" class="java.lang.Object"/>
+	<field name="JenisPrestasi" class="java.lang.Object"/>
+	<field name="TingkatPrestasi" class="java.lang.Object"/>
+	<field name="Keterangan" class="java.lang.Object"/>
+	<field name="Tanggal" class="java.lang.Object"/>
+	<field name="Poin" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="37" width="231" height="20" uuid="d97dbdee-ba87-44fd-b117-f7a0da4fff44"/>
+				<text><![CDATA[Universitas Kristen Duta Wacana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="57" width="131" height="20" uuid="eff7e8e8-63c4-4609-bc05-3dc70a29e33b"/>
+				<text><![CDATA[CIWI]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="211" height="37" uuid="e61ff7cb-ad90-43d6-aa85-2697ca6fe1b2"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Laporan Jabatan]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 2" style="table 2" x="0" y="0" width="555" height="125" uuid="f6eefc34-5995-4a13-a3c4-358e2375de94"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DatasetPrestasi" uuid="1d6ac8e9-4417-4e99-81fd-e673dd0fe0bb">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="8bf2ad0d-33ca-4961-b7d2-3f93a381859b">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="d4e83307-bd52-42ad-8857-240495cb6b96"/>
+								<text><![CDATA[IDPrestasi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="ab759c65-7fda-4270-9d5a-72e15cdae951"/>
+								<textFieldExpression><![CDATA[""+$F{IDPrestasi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="fc8137bc-0741-4308-b3a5-a54fd1376579">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="53a33fd3-6317-4d74-aaa7-4ec08b9721fa"/>
+								<text><![CDATA[JenisPrestasi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="79351507-e647-4901-9ff2-0cf058be2767"/>
+								<textFieldExpression><![CDATA[""+$F{JenisPrestasi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="023bb217-6b28-4793-a00f-c513f4e30153">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="1bcba5b4-77b0-4662-92f8-26e7c8f38b5c"/>
+								<text><![CDATA[TingkatPrestasi]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="3082d50c-e82d-435f-940f-57209818dc57"/>
+								<textFieldExpression><![CDATA[""+$F{TingkatPrestasi}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="4386c2cb-37e9-4ffd-881d-676fdb72df81">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="1c06a35b-bafd-4534-af24-7373feb7281e"/>
+								<text><![CDATA[Keterangan]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="2248465c-32d9-41bf-9a2f-7ce86a5f6380"/>
+								<textFieldExpression><![CDATA[""+$F{Keterangan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e4d4a5f7-5d2b-4c03-b0a8-f9c51eb42fe6">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="0de2dbd1-3514-4066-a22b-2b281b1d66db"/>
+								<text><![CDATA[Tanggal]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="b135ed60-3a0d-484c-a627-b4687c5f2483"/>
+								<textFieldExpression><![CDATA[""+$F{Tanggal}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="26aef72b-50d0-43ca-b428-0e851571b5b8">
+						<jr:columnHeader style="table 2_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="7cf31f9b-22de-4168-b00d-c71534204288"/>
+								<text><![CDATA[Poin]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 2_CH" height="30"/>
+						<jr:detailCell style="table 2_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="d340087b-848d-4cb2-914d-dba685df726e"/>
+								<textFieldExpression><![CDATA[""+$F{Poin}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="417" y="17" width="138" height="17" uuid="135d3ba8-be33-4ae0-a9d7-fe53929a8649"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[ciwi@students.ukdw.ac.id]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20" uuid="6d00d20e-d47e-4755-b48d-75e55fec762f"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="311" y="0" width="40" height="20" uuid="8a572776-2b69-444e-81a7-f5cbfa0dcf70"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="417" y="34" width="138" height="20" uuid="ea28e6d6-a034-4dd1-8fb8-2cfaba78e296"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[089716345634]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="0" width="80" height="20" uuid="b6dc9e2c-a849-423e-8e16-c02da3d746a4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

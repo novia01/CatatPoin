@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sistemcatatpoinkeaktifan.KemahasiswaanController">
+   <children>
+      <Button fx:id="cancelButton" layoutX="123.0" layoutY="361.0" mnemonicParsing="false" onAction="#switchToSecondary" text="Kembali" />
+      <VBox layoutX="16.0" layoutY="54.0" prefHeight="142.0" prefWidth="99.0" spacing="15.0">
+         <children>
+            <Label text="ID" />
+            <Label layoutX="10.0" layoutY="10.0" text="Jenis Kegiatan" />
+            <Label layoutX="10.0" layoutY="28.0" text="Poin " />
+            <Label layoutX="10.0" layoutY="45.0" text="Sifat" />
+         </children>
+      </VBox>
+      <VBox layoutX="95.0" layoutY="46.0" prefHeight="154.0" prefWidth="188.0" spacing="10.0">
+         <children>
+            <TextField fx:id="IDTextField" />
+            <ComboBox fx:id="comboJenis" onAction="#comboChanged" prefHeight="26.0" prefWidth="193.0" promptText="-pilihan-" />
+            <Label fx:id="labelPoin" prefWidth="82.0" />
+            <Label fx:id="labelSifat" prefHeight="18.0" prefWidth="88.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <Text layoutX="300.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Box">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Text>
+      <TableView fx:id="kemahasiswaanTableView" layoutX="300.0" layoutY="46.0" prefHeight="328.0" prefWidth="567.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="54.39996337890625" text="ID" />
+          <TableColumn fx:id="colJenis" prefWidth="356.0000305175781" text="Jenis Kegiatan" />
+            <TableColumn fx:id="colPoin" prefWidth="49.5999755859375" text="Poin" />
+            <TableColumn fx:id="colSifat" prefWidth="108.0" text="Sifat" />
+        </columns>
+      </TableView>
+      <Button fx:id="updateButton" layoutX="115.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" text="Update" />
+      <Button fx:id="insertButton" layoutX="32.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="68.0" text="Insert" />
+      <Button fx:id="deleteButton" layoutX="204.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="26.0" prefWidth="75.0" text="Delete" />
+      <TextField fx:id="filterField" layoutX="370.0" layoutY="10.0" prefHeight="26.0" prefWidth="241.0" promptText="cari di sini" />
+   </children>
+</AnchorPane>

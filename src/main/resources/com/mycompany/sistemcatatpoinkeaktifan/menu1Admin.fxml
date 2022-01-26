@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="474.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.sistemcatatpoinkeaktifan.menu1AdminController">
+   <children>
+      <VBox layoutX="23.0" layoutY="60.0" prefHeight="172.0" prefWidth="71.0" spacing="15.0">
+         <children>
+            <Label text="ID" />
+            <Label layoutX="10.0" layoutY="10.0" text="Firstname" />
+            <Label layoutX="10.0" layoutY="28.0" text="Lastname" />
+            <Label layoutX="10.0" layoutY="45.0" text="Username" />
+            <Label layoutX="10.0" layoutY="63.0" text="Password" />
+         </children>
+      </VBox>
+      <VBox layoutX="92.0" layoutY="48.0" prefHeight="187.0" prefWidth="194.0" spacing="10.0">
+         <children>
+            <TextField fx:id="IDTextField" />
+            <TextField fx:id="firstnameTextField" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="lastnameTextField" layoutX="10.0" layoutY="36.0" />
+            <TextField fx:id="usernameTextField" layoutX="10.0" layoutY="61.0" />
+            <TextField fx:id="passwordTextField" layoutX="10.0" layoutY="87.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="tvMenu1Admin" layoutX="309.0" layoutY="48.0" prefHeight="314.0" prefWidth="454.0">
+        <columns>
+          <TableColumn fx:id="colID" prefWidth="44.79998779296875" text="ID" />
+          <TableColumn fx:id="colFirst" prefWidth="104.7999267578125" text="Firstname" />
+            <TableColumn fx:id="colLast" prefWidth="75.0" text="Lastname" />
+            <TableColumn fx:id="colUsername" prefWidth="111.20001220703125" text="Username" />
+            <TableColumn fx:id="colPassword" prefWidth="115.99993896484375" text="Password" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="474.0" layoutY="378.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Delete" />
+      <Button fx:id="insertButton" layoutX="166.0" layoutY="237.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Insert" />
+      <Button fx:id="updateButton" layoutX="546.0" layoutY="378.0" mnemonicParsing="false" onAction="#handleButtonAction" text="Update" />
+      <Button fx:id="backButton" layoutX="23.0" layoutY="434.0" mnemonicParsing="false" onAction="#cancelSwitchTampilan" text="Kembali" />
+      <Label layoutX="336.0" layoutY="14.0" text="ACCOUNT MAHASISWA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

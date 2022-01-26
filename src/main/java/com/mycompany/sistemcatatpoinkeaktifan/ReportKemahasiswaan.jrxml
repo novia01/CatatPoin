@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f09bc79-c2c7-4bac-bbde-27923f6c87c9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 2">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<style name="table 3">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean($V{REPORT_COUNT}.intValue()%2==0)]]></conditionExpression>
+			<style backcolor="#EFF7FF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="Dataset Kemahasiswaan" uuid="35ddbbee-596a-4df3-aac2-8909c006aa4d">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM KegiatanKemahasiswaan]]>
+		</queryString>
+		<field name="IDKegiatan" class="java.lang.Object"/>
+		<field name="JenisKegiatan" class="java.lang.Object"/>
+		<field name="Poin" class="java.lang.Object"/>
+		<field name="Sifat" class="java.lang.Object"/>
+		<group name="IDKegiatan">
+			<groupExpression><![CDATA[$F{IDKegiatan}]]></groupExpression>
+		</group>
+		<group name="JenisKegiatan">
+			<groupExpression><![CDATA[$F{JenisKegiatan}]]></groupExpression>
+		</group>
+		<group name="Poin">
+			<groupExpression><![CDATA[$F{Poin}]]></groupExpression>
+		</group>
+		<group name="Sifat">
+			<groupExpression><![CDATA[$F{Sifat}]]></groupExpression>
+		</group>
+	</subDataset>
+	<subDataset name="DataKemahasiswaan" uuid="e8f30472-2ed7-4671-8bf1-a2ba3279de7e">
+		<queryString language="SQL">
+			<![CDATA[SELECT * FROM KegiatanKemahasiswaan]]>
+		</queryString>
+		<field name="IDKegiatan" class="java.lang.Object"/>
+		<field name="JenisKegiatan" class="java.lang.Object"/>
+		<field name="Poin" class="java.lang.Object"/>
+		<field name="Sifat" class="java.lang.Object"/>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[SELECT * FROM KegiatanKemahasiswaan]]>
+	</queryString>
+	<field name="IDKegiatan" class="java.lang.Object"/>
+	<field name="JenisKegiatan" class="java.lang.Object"/>
+	<field name="Poin" class="java.lang.Object"/>
+	<field name="Sifat" class="java.lang.Object"/>
+	<group name="IDKegiatan">
+		<groupExpression><![CDATA[$F{IDKegiatan}]]></groupExpression>
+	</group>
+	<group name="JenisKegiatan">
+		<groupExpression><![CDATA[$F{JenisKegiatan}]]></groupExpression>
+	</group>
+	<group name="Poin">
+		<groupExpression><![CDATA[$F{Poin}]]></groupExpression>
+	</group>
+	<group name="Sifat">
+		<groupExpression><![CDATA[$F{Sifat}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="77" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="211" height="37" uuid="663f442f-4793-4820-8637-8f0a33fb22ee"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<text><![CDATA[Laporan Kemahasiswaan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="37" width="231" height="20" uuid="6ea29a04-f474-4acb-8ff6-8980b1ba7750"/>
+				<text><![CDATA[Universitas Kristen Duta Wacana]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="57" width="131" height="20" uuid="57fdebb6-4a3b-4ab7-8974-f55a9aaa1236"/>
+				<text><![CDATA[CIWI]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement key="table 3" style="table 3" x="0" y="0" width="555" height="125" uuid="777f071b-3ae3-4aa8-bd45-61ea56a69fcd"/>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="DataKemahasiswaan" uuid="11982481-e168-4a21-aa9d-a21f22784d12">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:column width="90" uuid="a7f86539-ba9b-4c82-86d2-d37975a02405">
+						<jr:columnHeader style="table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="30d914a2-96ac-4b7d-9d3a-7981be34dc88"/>
+								<text><![CDATA[IDKegiatan]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 3_CH" height="30"/>
+						<jr:detailCell style="table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="d39d7cd0-2466-4ae9-9372-5489b633d735"/>
+								<textFieldExpression><![CDATA[""+$F{IDKegiatan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="e7b70194-c90f-473b-be72-3bc6410babef">
+						<jr:columnHeader style="table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="3bf79934-f06e-40ec-a947-71dc8cc2d00e"/>
+								<text><![CDATA[JenisKegiatan]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 3_CH" height="30"/>
+						<jr:detailCell style="table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="2e867beb-2557-47d5-bfac-acd505e5d417"/>
+								<textFieldExpression><![CDATA[""+$F{JenisKegiatan}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="db8e4830-febd-496e-91d0-ca1147b181fb">
+						<jr:columnHeader style="table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="d9d7c2c9-08e2-4334-9549-5a6162ad073a"/>
+								<text><![CDATA[Poin]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 3_CH" height="30"/>
+						<jr:detailCell style="table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="c15d47ba-bba1-495e-b83e-490e37db341c"/>
+								<textFieldExpression><![CDATA[""+$F{Poin}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="90" uuid="c46a6bca-5d3e-4416-91de-262dbcc6612b">
+						<jr:columnHeader style="table 3_CH" height="30">
+							<staticText>
+								<reportElement x="0" y="0" width="90" height="30" uuid="880aa897-3b51-4ce7-926d-4d4639db59ad"/>
+								<text><![CDATA[Sifat]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:columnFooter style="table 3_CH" height="30"/>
+						<jr:detailCell style="table 3_TD" height="20">
+							<textField>
+								<reportElement x="0" y="0" width="90" height="20" uuid="f1e9733e-f057-4732-8476-3d982306045f"/>
+								<textFieldExpression><![CDATA[""+$F{Sifat}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="417" y="17" width="138" height="17" uuid="d664196c-1869-4ec0-97ec-039888a94a00"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[ciwi@students.ukdw.ac.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="417" y="34" width="138" height="20" uuid="865d6975-3103-4d44-9c4f-40dc6427f356"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[089716345634]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="231" y="0" width="80" height="20" uuid="f63b2c6d-dc8c-4c24-b1eb-ed19835b2c20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="311" y="0" width="40" height="20" uuid="1a417bb2-025b-4bb0-af17-9789be6808f2"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="34" width="100" height="20" uuid="80170075-8e5d-4413-9615-ef9a7d6290dc"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
